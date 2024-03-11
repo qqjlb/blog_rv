@@ -1,5 +1,4 @@
-import React, { FC, useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom";
+import React, { FC, useState } from "react"
 
 import "./style/index.css";
 
@@ -123,7 +122,7 @@ class DrawTool{
     }
 }
 
-const MainMask: FC<MaskProps> = ({children})=>{
+const MainMask: FC<MaskProps> = ({})=>{
     const [isShow,setIsShow]=useState(false)
     var drawtool:DrawTool|null
     React.useEffect(()=>{
@@ -141,7 +140,7 @@ const MainMask: FC<MaskProps> = ({children})=>{
             return false
         }
     }        
-    document.onmouseup=(e)=>{
+    document.onmouseup=()=>{
         setIsShow(false)
         drawtool&&drawtool.over();
     }   

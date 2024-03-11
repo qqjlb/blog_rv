@@ -10,10 +10,6 @@ import "../../../style/less/cmd.less";
 const Cmd:FC = ()=>{
     const contentRef = useRef<HTMLDivElement>(null);
     
-    const clickHandle = ()=>{
-        contentRef.current?.focus();
-    }
-
     const [x,setX]=useState(0)
     const [y,setY]=useState(0)
     
@@ -30,7 +26,6 @@ const Cmd:FC = ()=>{
         }
     }
 
-
     return <>
         <div className="cmd_main" style={{left:x+"px",top:y+"px"}} >
             <div className="title" onMouseDown={mouseDownHandle}>1</div>
@@ -40,8 +35,6 @@ const Cmd:FC = ()=>{
                 </div>
             </div>
         </div>
-
-        
     </>
 }
 
