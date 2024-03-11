@@ -1,0 +1,11 @@
+
+.main{
+    background: rgb(250, 250, 215);
+
+}
+
+.bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}   
